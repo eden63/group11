@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    background-color: #DCEBFE;
+    height: 25vh; /* Full height of viewport */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat;
+    }
+
+
+.logo{
+    color:#49688D;
+    font-family: cursive;
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    display: inline-block; /* Ensure block-level display with centered margin */
+    text-align: center;
+    height: 100px;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+.move{
+    font-family: cursive;
+    top:150px;
+    right:250px;
+    display: flex;
+    color:black;
+    position: absolute;
+    font-size: 20px;
+}
+
+.bottom1 a{
+    position: absolute;
+    background-color: #A6BDD9;
+    color: black;
+    font-family: Calibri;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    top:250px;
+    right:100px;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bottom2 a{
+     position: absolute;
+    background-color: #A6BDD9;
+    color: black;
+    font-family: Calibri;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    top:350px;
+    right:100px;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*.bottom3 a{*/
+/*    position: absolute;*/
+/*    background-color: #A6BDD9;*/
+/*    color: black;*/
+/*    font-family: Calibri;*/
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*    border: none;*/
+/*    border-radius: 20px;*/
+/*    top:250px;*/
+/*    right:100px;*/
+/*    padding: 20px 30px 20px 30px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.bottom4 a{*/
+/*    position: absolute;*/
+/*    background-color: #A6BDD9;*/
+/*    color: black;*/
+/*    font-family: Calibri;*/
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*    border: none;*/
+/*    border-radius: 20px;*/
+/*    top:250px;*/
+/*    right:100px;*/
+/*    padding: 20px 30px 20px 30px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*}*/

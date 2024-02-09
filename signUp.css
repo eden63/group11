@@ -27,7 +27,6 @@ body{
     display: inline-block; /* Ensure block-level display with centered margin */
     text-align: center;
     height: 100px;
-
 }
 
 .logo h1{
