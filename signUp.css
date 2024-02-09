@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    background-color: #DCEBFE;
+    height: 25vh; /* Full height of viewport */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat;
+    }
+
+
+.logo{
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left:60px;
+    color:#49688D;
+    font-family: cursive;
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    display: inline-block; /* Ensure block-level display with centered margin */
+    text-align: center;
+    height: 100px;
+
+}
+
+.logo h1{
+    margin: 0;
+}
+
+
+
+.signUp-form{
+    position: absolute;
+    z-index: 1;
+    margin-top: 50px;
+    margin-right: 0px;
+    background-color: #ECF4FF;
+    padding: 80px 400px 30px 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signUp-form label{
+    display: block;
+    font-family: Calibri;
+    font-size: 20px;
+    text-align: right;
+}
+
+.signUp-form h1{
+    font-family: Calibri;
+    font-size: 30px;
+}
+
+.userName{
+    position: absolute;
+    top: 150px;
+    right:150px;
+    font-family: Calibri;
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.password{
+    position: absolute;
+    top: 220px;
+    right:150px;
+    font-family: Calibri;
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.phone{
+    position: absolute;
+    top: 290px;
+    right:150px;
+    font-family: Calibri;
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.fullName{
+     position: absolute;
+    top: 150px;
+    left:150px;
+    font-family: Calibri;
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.email{
+      position: absolute;
+    top: 220px;
+    left:150px;
+    font-family: Calibri;
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.signUp-form input{
+    text-align: right;
+    background: none;
+    padding: 10px 10px 10px 80px;
+}
+
+.signUp-form input[type="submit"]{
+    background-color: #49688D;
+    color: black;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 250px;
+    padding: 10px 50px 10px 50px;
+    text-align: center;
+}
+
+
+
+
+

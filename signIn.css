@@ -16,12 +16,13 @@ body{
     font-family: cursive;
     font-size: 30px;
     border: 1px solid white;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: white;
     margin: 10px auto;
     padding: 10px;
     display: inline-block; /* Ensure block-level display with centered margin */
     text-align: center;
+    height: 100px;
 }
 
 .logo h1{
@@ -48,6 +49,7 @@ body{
     margin: 10px 20px 10px 20px;
     background: none;
     border-color: #49688D;
+    text-align: right;
 }
 
 .signIn-form input[type="password"]{
@@ -55,6 +57,7 @@ body{
     margin: 10px 20px 10px 20px;
     background: none;
     border-color: #49688D;
+    text-align: right;
 
 }
 .signIn-form.form-group{
