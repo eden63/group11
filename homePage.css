@@ -19,7 +19,7 @@ body{
     border-radius: 10px;
     background-color: white;
     margin: 10px auto;
-    padding: 10px;
+    padding: 10px 50px;
     display: inline-block; /* Ensure block-level display with centered margin */
     text-align: center;
     height: 100px;
@@ -88,7 +88,7 @@ body{
     font-size: 18px;
     border-radius: 20px;
     top:250px;
-    left:630px;
+    right: 450px;
     padding: 20px 30px;
     text-align: center;
     text-decoration: none;
@@ -108,7 +108,7 @@ body{
     font-size: 18px;
     border-radius: 20px;
     top:350px;
-    left:630px;
+    right:450px;
     padding: 20px 30px ;
     text-align: center;
     text-decoration: none;
@@ -131,4 +131,21 @@ body{
     border-radius: 20px;
     border-color: #49688D;
     border-style: solid;
+}
+
+.logOut a{
+    position: absolute;
+    background-color: white;
+    color: black;
+    font-family: Calibri;
+    font-size: 18px;
+    border-radius: 20px;
+    top:450px;
+    right:370px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #49688D;
+    font-weight: bold;
 }

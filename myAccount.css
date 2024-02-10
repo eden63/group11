@@ -23,7 +23,7 @@ body{
     border-radius: 10px;
     background-color: white;
     margin: 10px auto;
-    padding: 10px;
+    padding: 10px 50px;
     display: inline-block; /* Ensure block-level display with centered margin */
     text-align: center;
     height: 100px;
@@ -56,23 +56,26 @@ body{
     font-size: 40px;
 }
 
-
-.bottom1 a{
+.bottom1{
     position: absolute;
-    width:150px;
-    height: 30px;
-    background-color: #A6BDD9;
-    color: black;
-    font-family: Calibri;
-    font-size: 20px;
-    border-radius: 20px;
     top:350px;
     right:525px;
     padding: 20px 30px;
-    text-align: center;
-    text-decoration: none;
+    border-radius: 20px;
     border-style: solid;
     border-color: #49688D;
+    background-color: #A6BDD9;
+}
+
+.bottom1 a{
+
+    color: black;
+    font-family: Calibri;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
+    width:150px;
+    height: 30px;
 }
 
