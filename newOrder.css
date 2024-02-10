@@ -23,7 +23,7 @@ body{
     border-radius: 10px;
     background-color: white;
     margin: 10px auto;
-    padding: 10px;
+    padding: 10px 50px;
     display: inline-block; /* Ensure block-level display with centered margin */
     text-align: center;
     height: 100px;
@@ -34,7 +34,7 @@ body{
 }
 
 
-.signUp-form{
+.order-form{
     position: absolute;
     z-index: 1;
     margin-top: 50px;
@@ -46,20 +46,20 @@ body{
     text-align: center;
 }
 
-.signUp-form label{
+.order-form label{
     display: block;
     font-family: Calibri;
     font-size: 15px;
     text-align: right;
 }
 
-.signUp-form h1{
+.order-form h1{
     font-family: Calibri;
     font-size: 40px;
     margin-bottom: 0px;
 }
 
-.signUp-form h2{
+.order-form h2{
     font-family: Calibri;
     font-size: 20px;
     margin-top: 0px;
@@ -119,40 +119,25 @@ body{
     font-size: 10px;
     padding-top: 10px;
 }
-.signUp-form input{
+.order-form input{
     text-align: right;
     background: none;
     padding: 10px 10px 10px 80px;
 }
 
-.signUp-form input[id="expirationDate"]{
+.order-form input[id="expirationDate"]{
     padding-left: 0px;
     padding-right: 10px;
     width: 100px;
 }
 
-.signUp-form input[id="cvv"]{
+.order-form input[id="cvv"]{
     padding-left: 0px;
     padding-right: 10px;
     width: 100px;
 }
-/*.signUp-form input.classes,*/
-/*.signUp-form input.cardNum,*/
-/*.signUp-form input.cardName,*/
-/*.signUp-form input.id{*/
-/*    text-align: right;*/
-/*    background: none;*/
-/*    padding: 10px 10px 10px 80px;*/
-/*}*/
 
-/*.signUp-form input.expDate,*/
-/*.signUp-form input.cvv{*/
-/*    text-align: right;*/
-/*    background: none;*/
-/*    padding: 10px 10px 0px 0px;*/
-/*}*/
-
-.signUp-form input[type="submit"]{
+.order-form input[type="submit"]{
     background-color: #A6BDD9;
     color: black;
     font-family: Calibri;
@@ -165,6 +150,23 @@ body{
     text-align: center;
 }
 
+.home a{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    color: black;
+    font-family: Calibri;
+    font-size: 18px;
+    border-radius: 20px;
+    top:20px;
+    right:50px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #49688D;
+    font-weight: bold;
+}
 
 
 
