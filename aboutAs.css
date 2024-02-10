@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    background-color: #DCEBFE;
+    height: 25vh; /* Full height of viewport */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat;
+    }
+
+.logo{
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left:60px;
+    color:#49688D;
+    font-family: cursive;
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    display: inline-block; /* Ensure block-level display with centered margin */
+    text-align: center;
+    height: 100px;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+.title{
+    position: absolute;
+    padding-top: 50px;
+}
+
+.title h1{
+    font-family: Calibri;
+    font-size: 50px;
+}
+
+.text{
+    padding-top: 200px;
+    font-family: Calibri;
+    font-size: 30px;
+    text-align: right;
+    padding-right: 450px;
+    padding-left: 200px;
+}
+
+
+#photo {
+    position: relative;
+}
+
+#photo img {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    border-color: #49688D;
+    border-style: solid;
+}
