@@ -2,14 +2,13 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     background-color: #DCEBFE;
-    height: 25vh; /* Full height of viewport */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: top; /* Center the image */
+    height: 25vh;
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
     }
-
 
 .logo{
     color:#49688D;
@@ -118,20 +117,36 @@ body{
 
 }
 
-#photo {
-    position: relative;
-}
-
-#photo img {
+.image-container {
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    animation: changeImage 15s infinite;
     position: absolute;
     top: 150px;
     right: 750px;
-    width: 350px;
-    height: 350px;
     border-radius: 20px;
     border-color: #49688D;
     border-style: solid;
 }
+
+@keyframes changeImage {
+    0% {
+        background-image: url('Pics/homePage.jpg');
+    }
+    33%{
+        background-image: url('Pics/homePage2.jpg');
+    }
+    66%{
+        background-image: url('Pics/homePage3.jpg');
+    }
+    100% {
+        background-image: url('Pics/homePage.jpg');
+    }
+}
+
+
 
 .logOut a{
     position: absolute;
