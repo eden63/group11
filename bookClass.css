@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #DCEBFE;
+    height: 25vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+
+
+.logo{
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left:60px;
+    color:#49688D;
+    font-family: cursive;
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px 50px;
+    display: inline-block; /* Ensure block-level display with centered margin */
+    text-align: center;
+    height: 100px;
+}
+
+
+.home a{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    color: black;
+    font-family: Calibri;
+    font-size: 18px;
+    border-radius: 20px;
+    top:20px;
+    right:50px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #49688D;
+    font-weight: bold;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+.title{
+    position: absolute;
+    padding-top: 50px;
+}
+
+.title h1{
+    font-family: Calibri;
+    font-size: 50px;
+}
+
