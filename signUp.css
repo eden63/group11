@@ -52,6 +52,8 @@ body{
     font-family: Calibri;
     font-size: 20px;
     text-align: right;
+    color: black;
+    padding-top: 10px;
 }
 
 .signUp-form h1{
@@ -59,61 +61,41 @@ body{
     font-size: 40px;
 }
 
-.userName{
+#userName{
     position: absolute;
     top: 150px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.password{
+#password{
     position: absolute;
     top: 220px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.phone{
+#phone{
     position: absolute;
     top: 290px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.fullName{
+#fullName{
      position: absolute;
     top: 150px;
     left:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.email{
+#email{
       position: absolute;
     top: 220px;
     left:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
 .signUp-form input{
     text-align: right;
     background: none;
     padding: 10px 10px 10px 80px;
+    font-family: Calibri;
 }
 
 .signUp-form input[type="submit"]{
     background-color: #A6BDD9;
     color: black;
-    font-family: Calibri;
     font-weight: bold;
     font-size: 20px;
     border: none;
@@ -122,7 +104,6 @@ body{
     padding: 10px 50px 10px 50px;
     text-align: center;
 }
-
 
 
 .back_signIn a{

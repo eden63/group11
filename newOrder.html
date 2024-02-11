@@ -14,29 +14,29 @@
      <form action="" method="GET" class="order-form">
          <h1>הזמנה חדשה</h1>
          <h2>עלות שיעור : 60 ש"ח</h2>
-        <div class="classes">
+        <div id="classes">
             <label>כמות שיעורים</label>
            <input type="number" name="number" placeholder="הכנס כמות שיעורים">
         </div>
-        <div class="cardNum">
+        <div id="cardNum">
             <label>מספר כרטיס אשראי</label>
              <input type="tel"  name="CardNumber" placeholder="הכנס מספר כרטיס אשראי" maxlength="16" autocomplete="cc-number" required>
         </div>
-        <div class="expDate">
+        <div id="expDate">
             <label for="expirationDate">תוקף</label>
             <input type="tel" id="expirationDate" name="expirationDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
         </div>
-         <div class="cvv">
+         <div id="cvv">
              <label for="cvv">ספרות בגב הכרטיס</label>
-            <input type="text" id="cvv" name="cvv" placeholder="CVV" minlength="3" maxlength="4" required>
+            <input type="text" id="cvv2" name="cvv" placeholder="CVV" minlength="3" maxlength="4" required>
          </div>
-         <div class="cardName">
+         <div id="cardName">
             <label>שם בעל הכרטיס</label>
            <input type="text" name="fullName" placeholder="הכנס שם מלא">
         </div>
-         <div class="id">
-            <label for="idNumber">תעודת זהות של בעל הכרטיס</label>
-            <input type="text" id="idNumber" name="idNumber" placeholder="הכנס תעודת זהות" pattern="[0-9]{16}" required>
+         <div id="id">
+            <label >תעודת זהות של בעל הכרטיס</label>
+            <input type="text" name="idNumber" placeholder="הכנס תעודת זהות" pattern="[0-9]{16}" required>
         </div>
         <input type="submit" name="button" value="הזמן עכשיו" name="">
     </form>

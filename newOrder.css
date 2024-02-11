@@ -51,6 +51,8 @@ body{
     font-family: Calibri;
     font-size: 15px;
     text-align: right;
+    color: black;
+    padding-top: 10px;
 }
 
 .order-form h1{
@@ -65,82 +67,53 @@ body{
     margin-top: 0px;
 }
 
-.classes{
+#classes{
     position: absolute;
     top: 150px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.cardNum{
+#cardNum{
     position: absolute;
     top: 220px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.expDate{
+#expDate{
     position: absolute;
     top: 290px;
     right:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.cvv{
+#cvv{
     position: absolute;
     top: 290px;
     right:280px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.cardName{
-     position: absolute;
+#cardName{
+    position: absolute;
     top: 150px;
     left:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
-.id{
-      position: absolute;
+#id{
+    position: absolute;
     top: 220px;
     left:150px;
-    font-family: Calibri;
-    color: black;
-    font-size: 10px;
-    padding-top: 10px;
 }
+
 .order-form input{
     text-align: right;
     background: none;
     padding: 10px 10px 10px 80px;
 }
 
-.order-form input[id="expirationDate"]{
+.order-form input[id="expirationDate"], input[id="cvv2"]{
     padding-left: 0px;
     padding-right: 10px;
     width: 100px;
 }
 
-.order-form input[id="cvv"]{
-    padding-left: 0px;
-    padding-right: 10px;
-    width: 100px;
-}
 
 .order-form input[type="submit"]{
     background-color: #A6BDD9;
     color: black;
-    font-family: Calibri;
     font-weight: bold;
     font-size: 20px;
     border: none;
