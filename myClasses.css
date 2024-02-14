@@ -62,3 +62,69 @@ body{
     font-size: 50px;
 }
 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    margin-top:180px;
+    direction: rtl;
+}
+
+  .grid-item {
+    background-color: #A6BDD9;
+    display: flex;
+     align-items: center;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    width:500px;
+    height:60px;
+    border-radius: 20px;
+    font-family:Calibri;
+  }
+
+  .time{
+      font-size: 40px;
+      font-weight: bold;
+
+  }
+  .time p{
+   position: absolute;
+   right:20px;
+   top:50%;
+   transform: translateY(-50%);
+  }
+
+  .date{
+      position: absolute;
+      left:40%;
+      font-size: 25px;
+      text-align: center;
+    }
+
+  .date p{
+    transform: translateX(-50%);
+    bottom: 10px;
+  }
+
+
+  .buttons {
+    position: absolute;
+    left:20px;
+    top:50%;
+   transform: translateY(-50%);
+   background-color: #49688D;
+   font-size: 25px;
+   width: 150px;
+   height: 70px;
+   border-radius: 20px;
+   border-color: black;
+   font-weight: bold;
+   font-family: Calibri;
+   border-width: 5px;
+  }
+
+  .buttons button {
+  }

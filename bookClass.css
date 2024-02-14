@@ -8,6 +8,7 @@ body{
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+
     }
 
 
@@ -62,3 +63,66 @@ body{
     font-size: 50px;
 }
 
+.date{
+    position: absolute;
+    background-color: #A6BDD9;
+    padding:20px 20px 170px 20px;
+    top:150px;
+    right:150px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.date #dayNum,
+.date #month {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    margin-top:180px;
+    direction: rtl;
+}
+
+  .grid-item {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    height:60px;
+    border-radius: 20px;
+    font-family:Calibri;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .buttons button{
+    position: absolute;
+    background-color: #A6BDD9;
+    color: black;
+    width:150px;
+    height:60px;
+    bottom: 20px;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+  }
+
+  #last{
+   left:300px;
+  }
+
+  #next{
+      left:100px;
+  }
