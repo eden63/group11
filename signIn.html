@@ -15,14 +15,14 @@
     <h2>!ברוכים הבאים</h2>
     </div>
 
-    <form action="" method="GET" class="signIn-form">
+    <form action="" method="GET" class="signIn-form" id="signInForm">
         <div class="form-group">
 <!--            <label>userName</label>-->
-           <input type="text" name="name" placeholder="שם משתמש">
+           <input type="text" name="name" id="userName" placeholder="שם משתמש">
         </div>
         <div class="form-group">
 <!--            <label>password</label>-->
-           <input type="password" name="password" placeholder="סיסמה">
+           <input type="password" name="password" id="password" placeholder="סיסמה">
         </div>
         <input type="submit" class="button" value="התחבר" name="">
     </form>
@@ -38,6 +38,7 @@
 <div class="noAccount">
     <h2>?אין לך חשבון</h2>
 </div>
+<script src="signIn.js"></script>
 
 </body>
 </html>

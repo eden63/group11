@@ -11,7 +11,7 @@
         <h1>PiLove</h1>
   </header>
 
-     <form action="" method="GET" class="order-form">
+     <form action="" method="GET" class="order-form" id="orderForm">
          <h1>הזמנה חדשה</h1>
          <h2>עלות שיעור : 60 ש"ח</h2>
         <div id="classes">
@@ -20,15 +20,15 @@
         </div>
         <div id="cardNum">
             <label>מספר כרטיס אשראי</label>
-             <input type="tel"  name="CardNumber" placeholder="הכנס מספר כרטיס אשראי" maxlength="16" autocomplete="cc-number" required>
+             <input type="tel"  name="CardNumber" placeholder="הכנס מספר כרטיס אשראי">
         </div>
         <div id="expDate">
             <label for="expirationDate">תוקף</label>
-            <input type="tel" id="expirationDate" name="expirationDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+            <input type="tel" id="expirationDate" name="expirationDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" >
         </div>
          <div id="cvv">
              <label for="cvv">ספרות בגב הכרטיס</label>
-            <input type="text" id="cvv2" name="cvv" placeholder="CVV" minlength="3" maxlength="4" required>
+            <input type="text" id="cvv2" name="cvv" placeholder="CVV" >
          </div>
          <div id="cardName">
             <label>שם בעל הכרטיס</label>
@@ -36,12 +36,15 @@
         </div>
          <div id="id">
             <label >תעודת זהות של בעל הכרטיס</label>
-            <input type="text" name="idNumber" placeholder="הכנס תעודת זהות" pattern="[0-9]{16}" required>
+            <input type="text" name="idNumber" placeholder="הכנס תעודת זהות">
         </div>
         <input type="submit" name="button" value="הזמן עכשיו" name="">
     </form>
     <div class="home">
     <a href="homePage.html">חזור למסך הבית</a>
     </div>
+
+<script src="newOrder.js"></script>
+
 </body>
 </html>
