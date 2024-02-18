@@ -24,7 +24,7 @@ body{
     background-color: white;
     margin: 10px auto;
     padding: 10px 50px;
-    display: inline-block; /* Ensure block-level display with centered margin */
+    display: inline-block;
     text-align: center;
     height: 100px;
 }
@@ -54,6 +54,14 @@ body{
     margin: 0 10px;
     font-family: Calibri;
     font-size: 40px;
+    font-weight: normal;
+}
+
+#numOfClass{
+    background-color: #A6BDD9;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+
 }
 
 .bottom1{
