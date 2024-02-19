@@ -47,73 +47,71 @@ function validID(id) {
     return idRegex.test(id) && id.length === expectedLength;
 }
 
-    const formData = document.querySelector('#orderForm')
-    const numberClasses = document.querySelector('#numOfClass')
-    const cardNum = document.querySelector('#cardNumer')
-    const expDate = document.querySelector('#expirationDate')
-    const cvv = document.querySelector('#cvv2')
-    const cardName = document.querySelector('#cardName2')
-    const idNumber = document.querySelector('#idNumber')
-    const orders=document.querySelector('.orders')
+document.addEventListener("DOMContentLoaded", function() {
+    const orders = [];
+    const formData = document.querySelector('#orderForm');
 
-const onSubmit = (e) =>{
-    e.preventDefault()
+    formData.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const numberClasses = document.querySelector('#numOfClass').value
+        const cardNum = document.querySelector('#cardNumer').value
+        const expDate = document.querySelector('#expirationDate').value
+        const cvv = document.querySelector('#cvv2').value
+        const cardName = document.querySelector('#cardName2').value
+        const idNumber = document.querySelector('#idNumber').value
 
-    //Validate all fields have been filled out
-    if (numberClasses.value === "" || cardNum.value === "" || expDate.value === "" ||
-        cvv.value === "" || cardName.value === "" || idNumber.value === "") {
-        alert("אנא מלא את כל הפרטים");
-        return false;
-    }
+        //Validate all fields have been filled out
+        if (numberClasses === "" || cardNum === "" || expDate === "" ||
+            cvv === "" || cardName === "" || idNumber === "") {
+            alert("אנא מלא את כל הפרטים");
+            return false;
+        }
 
-    //Validate the number of classes is a number and bigger than 0
-     if (!checkNumber(numberClasses.value)) {
-      alert("אנא הכנס מספר שיעורים תקין");
-      return false;
-    }
-    //check the card number is valid - 16 digits
-    if (!isValidCardNum(cardNum.value )) {
-      alert("אנא הכנס מספר כרטיס אשראי תקין");
-      return false;
-    }
-    //check if the expiration date is valid
-    if(!ExpirationValid(expDate.value)) {
-        console.log(expDate)
-        alert("אנא הכנס תוקף אשראי תקין");
-        return false;
-    }
+        //Validate the number of classes is a number and bigger than 0
+         if (!checkNumber(numberClasses)) {
+          alert("אנא הכנס מספר שיעורים תקין");
+          return false;
+        }
 
-    //check if the cvv is valid
-    if(!CVVValid(cvv.value))
-    {
-        alert("אנא הכנס CVV תקין");
-        return false
-    }
-    //validate name card is only letters
-    if (!isLettersOnly(cardName.value)) {
-      alert("אנא הכנס שם בעל הכרטיס רק באותיות");
-      return false;
-    }
+        //check the card number is valid - 16 digits
+        if (!isValidCardNum(cardNum )) {
+          alert("אנא הכנס מספר כרטיס אשראי תקין");
+          return false;
+        }
+        //check if the expiration date is valid
+        if(!ExpirationValid(expDate)) {
+            alert("אנא הכנס תוקף אשראי תקין");
+            return false;
+        }
 
-     //check if the id number  is valid
-    if(!validID(idNumber.value)) {
-        alert("אנא הכנס מספר תעודת זהות תקין");
-        return false;
-    }
+        //check if the cvv is valid
+        if(!CVVValid(cvv))
+        {
+            alert("אנא הכנס CVV תקין");
+            return false
+        }
 
-    const li=document.createElement('li')
-    li.innerHTML=`numberClasses: ${numberClasses.value} | cardNum: ${cardNum.value} | expdate: ${expDate.value} |
-                    cvv: ${cvv.value} | cardName: ${cardName.value} | idNumber: ${idNumber.value}`
-    orders.appendChild(li)
-    console.log(orders)
+        //validate name card is only letters
+        if (!isLettersOnly(cardName)) {
+          alert("אנא הכנס שם בעל הכרטיס רק באותיות");
+          return false;
+        }
 
-    //Redirect to the home page with form data as query parameters
-    window.location.href = `myAccount.html?numberClasses=${encodeURIComponent(numberClasses.value)}`;
-    alert("ההזמנה בוצעה בהצלחה");
+         //check if the id number  is valid
+        if(!validID(idNumber)) {
+            alert("אנא הכנס מספר תעודת זהות תקין");
+            return false;
+        }
 
-}
+        const newOrder={numberClasses,cardNum,expDate,cvv,cardName,idNumber};
+        orders.push(newOrder);
+        alert("ההזמנה בוצעה בהצלחה");
+        window.location.href = "myAccount.html";
 
-formData.addEventListener('submit', onSubmit)
+
+    })
+
+});
 
 
 

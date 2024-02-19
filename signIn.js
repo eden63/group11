@@ -1,52 +1,30 @@
-function doesUserExist(usernameToCheck) {
-    return users.some(user => user.username === usernameToCheck);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const formData = document.getElementById("signInForm");
 
-const formData = document.querySelector('#signInForm')
-const userName = document.querySelector('#userName')
-const password = document.querySelector('#password')
-const onSubmit = (e) =>{
-    e.preventDefault()
+    formData.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    // Validate all fields have been filled out
-    if (userName.value === "" || password.value === "") {
-        alert("אנא מלא את כל השדות");
-        return false;
-    }
+        const users = [
+            {userName: "eden", password: "123"}
+        ];
 
-     //Redirect to the home page with form data as query parameters
-    window.location.href = `homePage.html?userName=${encodeURIComponent(userName.value)}&password=${encodeURIComponent(password.value)}`;
-    alert("ההתחברות בוצעה בהצלחה");
+        const userName = document.getElementById("userName").value;
+        const password = document.getElementById("password").value;
 
-}
+        const userExists = users.some(user => user.userName === userName && user.password === password);
 
-formData.addEventListener('submit', onSubmit)
+        if (!userExists) {
+            alert("הכנסת שם משתמש או סיסמה לא נכונים");
+            return false;
+        }
 
+        formData.reset();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("signInForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const userName = formData.get("userName");
-    const password = formData.get("password");
-
-
-
-    console.log("userName", userName);
-    console.log("Password:", password);
-
-    // Redirect to the home page with form data as query parameters
-    window.location.href = `homePage.html?userName=${encodeURIComponent(userName)}&password=${encodeURIComponent(password)}`;
+        sessionStorage.setItem('user', userName);
+        window.location.href = "homePage.html";
+    });
 });
+
+
+
+
