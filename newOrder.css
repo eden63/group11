@@ -24,7 +24,7 @@ body{
     background-color: white;
     margin: 10px auto;
     padding: 10px 50px;
-    display: inline-block; /* Ensure block-level display with centered margin */
+    display: inline-block;
     text-align: center;
     height: 100px;
 }

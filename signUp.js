@@ -7,44 +7,60 @@ function isValidPhoneNumber(phoneNumber) {
     return phoneRegex.test(phoneNumber);
 }
 
-document.getElementById("signUpForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+    const formData = document.querySelector('#signUpForm')
+    const userName = document.querySelector('#username2')
+    const password = document.querySelector('#password2')
+    const phone = document.querySelector('#phone2')
+    const fullName = document.querySelector('#fullName2')
+    const email = document.querySelector('#email2')
+    const users=document.querySelector('.users')
 
-    const formData = new FormData(event.target);
-    const userName = formData.get("name");
-    const password = formData.get("password");
-    const phone = formData.get("tel");
-    const fullName = formData.get("fullName");
-    const email = formData.get("email");
 
+const onSubmit = (e) => {
+    e.preventDefault()
 
     // Validate all fields have been filled out
-    if (userName === "" || password === "" || phone === "" || fullName === "" || email === "") {
+    if (userName.value === "" || password.value === "" || phone.value === "" ||
+        fullName.value === "" || email.value === "") {
         alert("אנא מלא את כל הפרטים");
         return false;
     }
     //validate full name is only letters
-    if (!isLettersOnly(fullName)) {
-      alert("אנא הכנס שם המלא רק באותיות");
-      return false;
+    if (!isLettersOnly(fullName.value)) {
+        alert("אנא הכנס שם המלא רק באותיות");
+        return false;
     }
 
     //Validate the phone number is 10 digits
-    if (!isValidPhoneNumber(phone)) {
-    alert("אנא הכנס מספר טלפון תקין");
-    return false;
+    if (!isValidPhoneNumber(phone.value)) {
+        alert("אנא הכנס מספר טלפון תקין");
+        return false;
     }
 
-    console.log("userName:", userName);
-    console.log("password:", password);
-    console.log("phone:", phone);
-    console.log("fullName:", fullName);
-    console.log("email:", email);
+    const li = document.createElement('li')
+    li.innerHTML = `userName: ${userName.value} | password: ${password.value} | phone: ${phone.value} | 
+    fullName: ${fullName.value} | email: ${email.value}`
+    users.appendChild(li)
+    console.log(users)
 
-
-    // Redirect to the home page with form data as query parameters
-    window.location.href = `signIn.html?userName=${encodeURIComponent(userName)}&password=${encodeURIComponent(password)}`;
-
+    //Redirect to the sign in page with form data as query parameters
+    window.location.href =`signIn.html?userName=${encodeURIComponent(userName.value)}&password=${encodeURIComponent(password.value)}&phone=${encodeURIComponent(phone.value)}&fullName=${encodeURIComponent(fullName.value)}&email=${encodeURIComponent(email.value)}`;
     alert("הרשמה בוצעה בהצלחה");
+}
 
-});
+formData.addEventListener('submit', onSubmit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

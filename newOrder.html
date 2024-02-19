@@ -16,11 +16,11 @@
          <h2>עלות שיעור : 60 ש"ח</h2>
         <div id="classes">
             <label>כמות שיעורים</label>
-           <input type="number" name="number" placeholder="הכנס כמות שיעורים">
+           <input type="number"  id="numOfClass" name="number" placeholder="הכנס כמות שיעורים">
         </div>
         <div id="cardNum">
             <label>מספר כרטיס אשראי</label>
-             <input type="tel"  name="CardNumber" placeholder="הכנס מספר כרטיס אשראי">
+             <input type="tel" id="cardNumer" name="CardNumber" placeholder="הכנס מספר כרטיס אשראי">
         </div>
         <div id="expDate">
             <label for="expirationDate">תוקף</label>
@@ -32,11 +32,11 @@
          </div>
          <div id="cardName">
             <label>שם בעל הכרטיס</label>
-           <input type="text" name="fullName" placeholder="הכנס שם מלא">
+           <input type="text" id="cardName2" name="fullName" placeholder="הכנס שם מלא">
         </div>
          <div id="id">
             <label >תעודת זהות של בעל הכרטיס</label>
-            <input type="text" name="idNumber" placeholder="הכנס תעודת זהות">
+            <input type="text" id="idNumber" name="idNumber" placeholder="הכנס תעודת זהות">
         </div>
         <input type="submit" name="button" value="הזמן עכשיו" name="">
     </form>
@@ -44,6 +44,8 @@
     <a href="homePage.html">חזור למסך הבית</a>
     </div>
 
+
+ <ul class="orders" style="display: none"></ul>
 <script src="newOrder.js"></script>
 
 </body>
