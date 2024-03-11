@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up PiLove</title>
-  <link rel="stylesheet" href="../static/css/signUp.css">
+    <link rel="stylesheet" href="{{ url_for('signUp.static', filename='css/signUp.css') }}"/>
 
 </head>
 <body>
@@ -42,7 +42,7 @@
     <a href="../../signIn/templates/signIn.html">חזור למסך ההתחברות</a>
     </div>
 
-<script src="../static/js/signUp.js"></script>
+<script src="{{url_for('signUp.static', filename='js/signUp.js')}}"></script>
 
 </body>
 </html>

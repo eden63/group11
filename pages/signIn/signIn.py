@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, url_for
 
 # about blueprint definition
 signIn = Blueprint(
@@ -9,8 +9,8 @@ signIn = Blueprint(
     template_folder='templates'
 )
 
-
 # Routes
-@signIn.route('/signIn')
+@signIn.route('/')
+@signIn.route('/signIn', methods = ['GET','POST'])
 def index():
     return render_template('signIn.html')

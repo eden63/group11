@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, url_for
 
 # about blueprint definition
 homePage = Blueprint(
@@ -8,7 +8,6 @@ homePage = Blueprint(
     static_url_path='/homePage',
     template_folder='templates'
 )
-
 
 # Routes
 @homePage.route('/homePage')

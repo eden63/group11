@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center; /* Center horizontally */
     height: 25vh; /* Full height of viewport */
-    background-image: url("../../../../Pics/background1.jpg");
+    background-image: url("../media/background1.jpg");
     background-size: cover; /* Cover the entire viewport */
     background-position: top; /* Center the image */
     background-repeat: no-repeat;

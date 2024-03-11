@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>New Order PiLove</title>
-      <link rel="stylesheet" href="../static/css/newOrder.css">
+    <link rel="stylesheet" href="{{ url_for('newOrder.static', filename='css/newOrder.css') }}"/>
 
 </head>
 <body>
@@ -46,7 +46,7 @@
 
 
  <ul class="orders" style="display: none"></ul>
-<script src="../static/js/newOrder.js"></script>
+<script src="{{url_for('newOrder.static', filename='js/newOrder.js')}}"></script>
 
 </body>
 </html>

@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const userExists = users.some(user => user.userName === userName && user.password === password);
 
+        if (userName === "" || password === ""){
+            alert("אנא מלא את כל הפרטים");
+            return false;
+        }
+
         if (!userExists) {
             alert("הכנסת שם משתמש או סיסמה לא נכונים");
             return false;
@@ -21,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         formData.reset();
 
         sessionStorage.setItem('user', userName);
-        window.location.href = "homePage.html";
+        window.location.href = '/homePage'
     });
 });
 

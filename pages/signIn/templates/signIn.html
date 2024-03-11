@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign In PiLove</title>
-      <link rel="stylesheet" href="../static/css/signIn.css">
+    <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
 
 </head>
 <body>
@@ -15,7 +15,7 @@
     <h2>!ברוכים הבאים</h2>
     </div>
 
-    <form action="" method="GET" class="signIn-form" id="signInForm">
+    <form action="/signIn" method="POST" class="signIn-form" id="signInForm">
         <div class="form-group">
 <!--            <label>userName</label>-->
            <input type="text" name="userName" id="userName" placeholder="שם משתמש">
@@ -38,7 +38,8 @@
 <div class="noAccount">
     <h2>?אין לך חשבון</h2>
 </div>
-<script src="../static/js/signIn.js"></script>
+<script src="{{url_for('signIn.static', filename='js/signIn.js')}}"></script>
+
 
 </body>
 </html>

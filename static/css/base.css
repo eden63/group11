@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #DCEBFE;
+    height: 25vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
