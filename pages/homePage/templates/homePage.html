@@ -17,16 +17,16 @@
  </div>
 
 <div  class="buttons">
-    <a href="../../bookClass/templates/bookClass.html" id="b1">+ הרשמה לשיעור</a>
+    <a href="{{ url_for('bookClass.index') }}" id="b1">+ הרשמה לשיעור</a>
 </div>
 <div class="buttons" >
-    <a href="../../myClasses/templates/myClasses.html" id="b2">השיעורים שלי</a>
+    <a href="{{ url_for('myClasses.index') }}" id="b2">השיעורים שלי</a>
 </div>
 <div class="buttons" >
-    <a href="../../aboutAs/templates/aboutAs.html" id="b3">קצת עלינו</a>
+    <a href="{{ url_for('aboutAs.index') }}"  id="b3">קצת עלינו</a>
 </div>
 <div class="buttons" >
-    <a href="../../myAccount/templates/myAccount.html" id="b4">החשבון שלי</a>
+    <a href="{{ url_for('myAccount.index') }}"  id="b4">החשבון שלי</a>
 </div>
     <div class="image-container"></div>
 <div class="logOut">

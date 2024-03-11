@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
 
         const users = [
-            {userName: "eden", password: "123"}
+            {userName: "1", password: "1"}
         ];
 
         const userName = document.getElementById("userName").value;
