@@ -91,16 +91,16 @@ body{
 
 @keyframes changeImage {
     0% {
-        background-image: url('Pics/homePage.jpg');
+        background-image: url('../../../../Pics/homePage.jpg');
     }
     33%{
-        background-image: url('Pics/homePage2.jpg');
+        background-image: url('../../../../Pics/homePage2.jpg');
     }
     66%{
-        background-image: url('Pics/homePage3.jpg');
+        background-image: url('../../../../Pics/homePage3.jpg');
     }
     100% {
-        background-image: url('Pics/homePage.jpg');
+        background-image: url('../../../../Pics/homePage.jpg');
     }
 }
 
