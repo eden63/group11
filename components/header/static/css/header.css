@@ -1,0 +1,35 @@
+a{
+    position: absolute;
+    background-color: white;
+    color: black;
+    font-family: Calibri;
+    font-size: 18px;
+    border-radius: 20px;
+    top:20px;
+    right:50px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #49688D;
+    font-weight: bold;
+}
+
+
+.logo{
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left:60px;
+    color:#49688D;
+    font-family: cursive;
+    font-size: 65px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px 50px;
+    display: inline-block;
+    text-align: center;
+    height: 100px;
+}

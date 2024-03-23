@@ -41,5 +41,6 @@ from pages.signUp.signUp import signUp
 app.register_blueprint(signUp)
 
 ###### Components
-
-
+##header
+from components.header.header import header
+app.register_blueprint(header)

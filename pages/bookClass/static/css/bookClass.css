@@ -12,23 +12,6 @@ body{
     }
 
 
-.logo{
-    position: absolute;
-    z-index: 2;
-    top: 30px;
-    left:60px;
-    color:#49688D;
-    font-family: cursive;
-    font-size: 30px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: white;
-    margin: 10px auto;
-    padding: 10px 50px;
-    display: inline-block; /* Ensure block-level display with centered margin */
-    text-align: center;
-    height: 100px;
-}
 
 
 .home a{
@@ -49,9 +32,7 @@ body{
     font-weight: bold;
 }
 
-.logo h1{
-    margin: 0;
-}
+
 
 .title{
     position: absolute;

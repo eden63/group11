@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('aboutAs.static', filename='css/aboutAs.css') }}">
+{% extends "base.html" %}
 
-</head>
-<body>
-    <header  class="logo">
-        <h1>PiLove</h1>
-    </header>
-    <div class="title">
-    <h1>קצת עלינו</h1>
-    </div>
-    <div class="text">
-                מכון פילאטיס הוא מקום המתמקד בשיפור הכושר הפיזי והאיזון
-        הנפשי. באמצעות תרגולי פילאטיס מגוונים, המקום מספק
-        חוויה אישית ומקצועית. באתר האינטרנט של המכון תוכלו
-        למצוא מידע על סוגי השיעורים, המאמנים, והיתרונות
-        הבריאותיים, יחד עם פרטים אודות מיקום, שעות פעילות
-        ואפשרויות יצירת קשר. האתר הוא מרכז מידע ותקשורת יעיל למתאמנים
-    </div>
-    <div id="photo">
-             <img src="..\aboutAs\static\media\aboutUs.jpg">
+{% set page_head_title = 'AboutAs' %}
 
-    </div>
-    <div class="home">
-    <a href="../../homePage/templates/homePage.html">חזור למסך הבית</a>
-    </div>
-</body>
-</html>
+{% block page_head %}
+    <link rel="stylesheet" href="{{ url_for('aboutAs.static', filename='css/aboutAs.css') }}"/>
+{% endblock %}
+
+
+{% block page_body_header %}
+    <h1 class="title">קצת עלינו</h1>
+ {% endblock %}
+
+{% block page_body_main %}
+        <div class="text">
+                    מכון פילאטיס הוא מקום המתמקד בשיפור הכושר הפיזי והאיזון
+            הנפשי. באמצעות תרגולי פילאטיס מגוונים, המקום מספק
+            חוויה אישית ומקצועית. באתר האינטרנט של המכון תוכלו
+            למצוא מידע על סוגי השיעורים, המאמנים, והיתרונות
+            הבריאותיים, יחד עם פרטים אודות מיקום, שעות פעילות
+            ואפשרויות יצירת קשר. האתר הוא מרכז מידע ותקשורת יעיל למתאמנים
+        </div>
+        <div id="photo">
+            <img src="{{ url_for('aboutAs.static', filename='media/aboutUs.jpg') }}">
+        </div>
+{% endblock %}
+
+
+
+
