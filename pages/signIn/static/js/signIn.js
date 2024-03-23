@@ -2,34 +2,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const formData = document.getElementById("signInForm");
 
     formData.addEventListener("submit", function(e) {
-        e.preventDefault();
 
-        const users = [
-            {userName: "1", password: "1"}
-        ];
-
-        const userName = document.getElementById("userName").value;
+        const userName = document.getElementById("username").value;
         const password = document.getElementById("password").value;
-
-        const userExists = users.some(user => user.userName === userName && user.password === password);
 
         if (userName === "" || password === ""){
             alert("אנא מלא את כל הפרטים");
             return false;
         }
-
-        if (!userExists) {
-            alert("הכנסת שם משתמש או סיסמה לא נכונים");
-            return false;
-        }
-
-        formData.reset();
-
-        sessionStorage.setItem('user', userName);
-        window.location.href = '/homePage'
     });
 });
 
+const sendMessage = (message) => {
+    alert(message);
+};
 
-
-
+window.addEventListener("load", function() {
+    // Check if the .msg element exists
+    const msgElement = document.querySelector(".msg");
+    if (msgElement) {
+        // Check if it has any text content
+        const msgContent = msgElement.textContent.trim();
+        if (msgContent !== "") {
+            sendMessage(msgContent);
+        }
+    }
+});

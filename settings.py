@@ -13,4 +13,4 @@ DB = {
     'database': os.environ.get('DB_NAME')
 }
 
-mongoDB = {'uri': "mongodb+srv://omer:123@cookify.labufvf.mongodb.net/?retryWrites=true&w=majority&appName=Cookify"}
+mongoDB = {'uri':"mongodb+srv://edenli:eden0901@cluster0.a8hvwx3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}

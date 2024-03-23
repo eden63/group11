@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign Up PiLove</title>
+{% extends "base.html" %}
+
+{% set page_head_title = 'SignUp' %}
+
+{% block page_head_css %}
     <link rel="stylesheet" href="{{ url_for('signUp.static', filename='css/signUp.css') }}"/>
+{% endblock %}
 
-</head>
-<body>
-  <header  class="logo">
-        <h1>PiLove</h1>
-  </header>
-
-     <form action="" method="GET" class="signUp-form" id="signUpForm">
+{% block header%}
+    <div class="back_signIn">
+        <a href="/signIn">חזור למסך ההתחברות</a>
+        <h1 id="logo">PiLove</h1>
+    </div>
+{% endblock %}
+{% block page_body_main %}
+     <form action="/signUp" method="POST" class="signUp-form" id="signUpForm">
          <h1>הרשמה חדשה</h1>
         <div id="userName">
             <label>שם משתמש</label>
-           <input type="text" name="name" id="username2" placeholder="הכנס שם משתמש">
+           <input type="text" name="username" id="username2" placeholder="הכנס שם משתמש">
         </div>
         <div id="password">
             <label>סיסמה</label>
@@ -23,7 +25,7 @@
         </div>
         <div id="phone">
              <label>טלפון</label>
-             <input type="tel" name="tel" id="phone2" placeholder="הכנס מספר טלפון">
+             <input type="tel" name="phone" id="phone2" placeholder="הכנס מספר טלפון">
          </div>
          <div id="fullName">
             <label>שם מלא</label>
@@ -35,14 +37,17 @@
         </div>
         <input type="submit" name="button" value="הירשם" name="">
     </form>
+<div class="msg" style="display: none">{{msg}}</div>`
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{url_for('signUp.static', filename='js/signUp.js')}}"></script>
+{% endblock %}
 
 <!--  <ul class="users" style="display: none"></ul>-->
 
-    <div class="back_signIn">
-    <a href="../../signIn/templates/signIn.html">חזור למסך ההתחברות</a>
-    </div>
 
-<script src="{{url_for('signUp.static', filename='js/signUp.js')}}"></script>
+
 
 </body>
 </html>

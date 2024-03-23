@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, url_for
+from flask import Blueprint, render_template,redirect, url_for, request
+from utilities.db_manager import *
 
 # about blueprint definition
 myAccount = Blueprint(
@@ -13,4 +14,6 @@ myAccount = Blueprint(
 # Routes
 @myAccount.route('/myAccount')
 def index():
-    return render_template('myAccount.html')
+    user = get_user_by_username(session['username'])
+    leftClasses = user['leftClasses']
+    return render_template('myAccount.html', user=user, leftClasses=leftClasses)

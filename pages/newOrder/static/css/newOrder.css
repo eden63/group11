@@ -1,37 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    background-color: #DCEBFE;
-    height: 25vh; /* Full height of viewport */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: top; /* Center the image */
-    background-repeat: no-repeat;
-    }
-
-
-.logo{
-    position: absolute;
-    z-index: 2;
-    top: 30px;
-    left:60px;
-    color:#49688D;
-    font-family: cursive;
-    font-size: 30px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: white;
-    margin: 10px auto;
-    padding: 10px 50px;
-    display: inline-block;
-    text-align: center;
-    height: 100px;
-}
-
-.logo h1{
-    margin: 0;
-}
 
 
 .order-form{
@@ -121,24 +87,6 @@ body{
     margin-top: 250px;
     padding: 10px 50px 10px 50px;
     text-align: center;
-}
-
-.home a{
-    position: absolute;
-    z-index: 2;
-    background-color: white;
-    color: black;
-    font-family: Calibri;
-    font-size: 18px;
-    border-radius: 20px;
-    top:20px;
-    right:50px;
-    padding: 20px 30px;
-    text-align: center;
-    text-decoration: none;
-    border-style: solid;
-    border-color: #49688D;
-    font-weight: bold;
 }
 
 

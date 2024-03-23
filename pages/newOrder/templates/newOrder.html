@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New Order PiLove</title>
+{% extends "base.html" %}
+
+{% set page_head_title = 'NewOrder' %}
+
+{% block page_head_css %}
     <link rel="stylesheet" href="{{ url_for('newOrder.static', filename='css/newOrder.css') }}"/>
+{% endblock %}
 
-</head>
-<body>
-  <header  class="logo">
-        <h1>PiLove</h1>
-  </header>
-
+{% block page_body_main %}
      <form action="" method="GET" class="order-form" id="orderForm">
          <h1>הזמנה חדשה</h1>
          <h2>עלות שיעור : 60 ש"ח</h2>
@@ -40,13 +36,11 @@
         </div>
         <input type="submit" name="button" value="הזמן עכשיו" name="">
     </form>
-    <div class="home">
-    <a href="../../homePage/templates/homePage.html">חזור למסך הבית</a>
-    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{url_for('newOrder.static', filename='js/newOrder.js')}}"></script>
+{% endblock %}
 
 
- <ul class="orders" style="display: none"></ul>
-<script src="{{url_for('newOrder.static', filename='js/newOrder.js')}}"></script>
 
-</body>
-</html>

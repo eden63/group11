@@ -9,11 +9,9 @@ function isValidPhoneNumber(phoneNumber) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const users = [];
     const formData = document.querySelector('#signUpForm');
 
     formData.addEventListener("submit", function(event) {
-        event.preventDefault();
         const userName = document.querySelector('#username2').value;
         const password = document.querySelector('#password2').value;
         const phone = document.querySelector('#phone2').value;
@@ -39,15 +37,26 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
 
-        const newUser = {userName, password, phone, fullName, email};
-        users.push(newUser);
-        alert("הרשמה בוצעה בהצלחה");
-        window.location.href = "signIn.html";
+
     })
 });
 
 
+const sendMessage = (message) => {
+    alert(message);
+};
 
+window.addEventListener("load", function() {
+    // Check if the .msg element exists
+    const msgElement = document.querySelector(".msg");
+    if (msgElement) {
+        // Check if it has any text content
+        const msgContent = msgElement.textContent.trim();
+        if (msgContent !== "") {
+            sendMessage(msgContent);
+        }
+    }
+});
 
 
 

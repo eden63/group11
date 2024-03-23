@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('homePage.static', filename='css/homePage.css') }}">
+{% extends "base.html" %}
 
-</head>
-<body>
-    <header  class="logo">
-        <h1>PiLove</h1>
-  </header>
+{% set page_head_title = 'HomePage' %}
 
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('homePage.static', filename='css/homePage.css') }}"/>
+{% endblock %}
 
+{% block header%}
+    <h1 id="logo">PiLove</h1>
+{% endblock %}
+
+{% block page_body_main %}
  <div class="move">
     <h2>Move to feel good </h2>
  </div>
@@ -30,7 +29,6 @@
 </div>
     <div class="image-container"></div>
 <div class="logOut">
-    <a href="../../signIn/templates/signIn.html">התנתק</a>
+    <a href="/signIn">התנתק</a>
 </div>
-</body>
-</html>
+{% endblock %}

@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Classes PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('myClasses.static', filename='css/myClasses.css') }}"/>
+{% extends "base.html" %}
 
-</head>
-<body>
-     <header  class="logo">
-        <h1>PiLove</h1>
-     </header>
-    <div class="title">
-        <h1>השיעורים שלי</h1>
-    </div>
+{% set page_head_title = 'MyClasses' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('myClasses.static', filename='css/myClasses.css') }}"/>
+{% endblock %}
+
+{% block page_body_header %}
+    <h1 class="title">השיעורים שלי</h1>
+ {% endblock %}
+
+{% block page_body_main %}
  <div class="grid-container">
   <div class="grid-item">
     <p class="time">16:00</p>
@@ -39,9 +37,4 @@
     <button class="buttons">בטל שיעור</button>
   </div>
 </div>
-
-
-    <div class="home">
-    <a href="../../homePage/templates/homePage.html">חזור למסך הבית</a>
-    </div></body>
-</html>
+{% endblock %}

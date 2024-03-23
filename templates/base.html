@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
     {% block page_head %}
         <title>{{ page_head_title|default('PiLove', true) }}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
     {% endblock %}
+    {% block page_head_css %}{% endblock %}
+
 </head>
 
 <body>
+{% block header %}
 {% include('header.html') %}
+{% endblock %}
 
 {% block page_body_header %} <h1></h1>{% endblock %}
 {% block page_body_main %} {% endblock %}

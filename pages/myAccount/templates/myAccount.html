@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Account PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('myAccount.static', filename='css/myAccount.css') }}"/>
+{% extends "base.html" %}
 
-</head>
-<body>
-    <header  class="logo">
-        <h1>PiLove</h1>
-  </header>
-    <div class="title">
-        <h1>החשבון שלי</h1>
-    </div>
+{% set page_head_title = 'MyAccount' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('myAccount.static', filename='css/myAccount.css') }}"/>
+{% endblock %}
+
+
+{% block page_body_header %}
+    <h1 class="title">החשבון שלי</h1>
+ {% endblock %}
+
+{% block page_body_main %}
     <div class="leftClass">
         <h2>נותר לך עוד</h2>
-        <h1 id="numOfClass">7</h1>
+        <h1 id="numOfClass">{{leftClasses}}</h1>
         <h2>שיעורים</h2>
     </div>
-    <div class="bottom1">
-    <a href="../../newOrder/templates/newOrder.html">הזמן עוד שיעורים</a>
-    </div>
-    <div class="home">
-    <a href="../../homePage/templates/homePage.html">חזור למסך הבית</a>
+    <div id="bottom1">
+     <a href="/newOrder">הזמן עוד שיעורים</a>
     </div>
 
-</body>
-</html>
+
+{% endblock %}

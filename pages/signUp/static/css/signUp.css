@@ -1,39 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    background-color: #DCEBFE;
-    height: 25vh; /* Full height of viewport */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: top; /* Center the image */
-    background-repeat: no-repeat;
-    }
-
-
-.logo{
+#logo{
     position: absolute;
     z-index: 2;
     top: 30px;
     left:60px;
     color:#49688D;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 65px;
     border: 1px solid white;
     border-radius: 10px;
     background-color: white;
     margin: 10px auto;
     padding: 10px 50px;
-    display: inline-block; /* Ensure block-level display with centered margin */
+    display: inline-block;
     text-align: center;
     height: 100px;
 }
-
-.logo h1{
-    margin: 0;
-}
-
-
 
 .signUp-form{
     position: absolute;

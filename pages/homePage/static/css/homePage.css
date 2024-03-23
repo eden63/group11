@@ -1,19 +1,8 @@
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #DCEBFE;
-    height: 25vh;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    }
 
-.logo{
-    color:#49688D;
+#logo{
+    color: #49688D;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 65px;
     border: 1px solid white;
     border-radius: 10px;
     background-color: white;

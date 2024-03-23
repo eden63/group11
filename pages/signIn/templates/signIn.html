@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign In PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
+{% extends "base.html" %}
 
-</head>
-<body>
-    <header  class="logo">
-        <h1>PiLove</h1>
-    </header>
+{% set page_head_title = 'SignIn' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
+{% endblock %}
+
+{% block header%}
+    <h1 id="logo">PiLove</h1>
+{% endblock %}
+
+{% block page_body_main %}
 
     <div class="welcome">
     <h2>!ברוכים הבאים</h2>
     </div>
-
-    <form action="/signIn" method="POST" class="signIn-form" id="signInForm">
+    <form action="{{url_for('signIn.signIn_user')}}" method="POST" class="signIn-form" id="signInForm">
         <div class="form-group">
 <!--            <label>userName</label>-->
-           <input type="text" name="userName" id="userName" placeholder="שם משתמש">
+           <input type="text" name="username" id="username" placeholder="שם משתמש">
         </div>
         <div class="form-group">
 <!--            <label>password</label>-->
@@ -32,14 +32,16 @@
 </div>
 
 <div class="signUp">
-    <a href="../../signUp/templates/signUp.html">הרשמה</a>
+    <a href="/signUp">הרשמה</a>
 </div>
 
 <div class="noAccount">
     <h2>?אין לך חשבון</h2>
 </div>
+<div class="msg" style="display: none">{{msg}}</div>`
+
+{% endblock %}
+
+{% block page_body_js %}
 <script src="{{url_for('signIn.static', filename='js/signIn.js')}}"></script>
-
-
-</body>
-</html>
+{% endblock %}

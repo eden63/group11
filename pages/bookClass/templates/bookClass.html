@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book PiLove</title>
-    <link rel="stylesheet" href="{{ url_for('bookClass.static', filename='css/bookClass.css') }}">
+{% extends "base.html" %}
 
-</head>
-<body>
-     <header  class="logo">
-        <h1>PiLove</h1>
-     </header>
-    <div class="title">
-        <h1>הירשם עכשיו</h1>
-    </div>
+{% set page_head_title = 'BookClass' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('bookClass.static', filename='css/bookClass.css') }}"/>
+{% endblock %}
+
+{% block page_body_header %}
+    <h1 class="title">הירשם עכשיו</h1>
+ {% endblock %}
+
+{% block page_body_main %}
+
      <div class="date">
          <h1 id="dayName">שני</h1>
          <h1 id="dayNum">14</h1>
@@ -49,8 +48,5 @@
     <button id="next">היום הבא</button>
 </div>
 </div>
-    <div class="home">
-    <a href="../../homePage/templates/homePage.html">חזור למסך הבית</a>
-    </div>
-</body>
-</html>
+{% endblock %}
+
