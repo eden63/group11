@@ -22,7 +22,7 @@ def signIn_user():
     if check_if_registered(username):
         user = get_user_by_username(request.form.get('username'))
         if user['password'] == request.form.get('password'):
-            session['username'] = request.form.get('usersname')
+            session['username'] = request.form.get('username')  # Changed from 'usersname' to 'username'
             session['logged_in'] = True
             return render_template('homePage.html', user=user)
         else:
@@ -33,7 +33,5 @@ def signIn_user():
         return render_template("signIn.html", msg=msg)
 
     return render_template("signIn.html", msg="")
-
-
 
 

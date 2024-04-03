@@ -8,37 +8,41 @@ function isValidPhoneNumber(phoneNumber) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
     const formData = document.querySelector('#signUpForm');
 
-    formData.addEventListener("submit", function(event) {
+    const onSubmit = function (event) {
+        event.preventDefault();
         const userName = document.querySelector('#username2').value;
         const password = document.querySelector('#password2').value;
         const phone = document.querySelector('#phone2').value;
         const fullName = document.querySelector('#fullName2').value;
         const email = document.querySelector('#email2').value;
 
-
         // Validate all fields have been filled out
         if (userName === "" || password === "" || phone === "" ||
             fullName === "" || email === "") {
             alert("אנא מלא את כל הפרטים");
-            return false;
+            return;
         }
         //validate full name is only letters
         if (!isLettersOnly(fullName)) {
             alert("אנא הכנס שם המלא רק באותיות");
-            return false;
+            return;
         }
 
         //Validate the phone number is 10 digits
         if (!isValidPhoneNumber(phone)) {
             alert("אנא הכנס מספר טלפון תקין");
-            return false;
+            return;
         }
 
+        // All inputs are valid, submit the form
+        formData.removeEventListener('submit', onSubmit);  // Remove the event listener
+        formData.submit();  // Submit the form
+        formData.addEventListener('submit', onSubmit);  // Add the event listener back
+    };
 
-    })
+    formData.addEventListener("submit", onSubmit);
 });
 
 

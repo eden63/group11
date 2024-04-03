@@ -48,10 +48,9 @@ function validID(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const orders = [];
     const formData = document.querySelector('#orderForm');
 
-    formData.addEventListener("submit", function (event) {
+    const onSubmit = function (event) {
         event.preventDefault();
         const numberClasses = document.querySelector('#numOfClass').value
         const cardNum = document.querySelector('#cardNumer').value
@@ -64,55 +63,67 @@ document.addEventListener("DOMContentLoaded", function() {
         if (numberClasses === "" || cardNum === "" || expDate === "" ||
             cvv === "" || cardName === "" || idNumber === "") {
             alert("אנא מלא את כל הפרטים");
-            return false;
+            return;
         }
 
         //Validate the number of classes is a number and bigger than 0
          if (!checkNumber(numberClasses)) {
           alert("אנא הכנס מספר שיעורים תקין");
-          return false;
+          return;
         }
 
         //check the card number is valid - 16 digits
         if (!isValidCardNum(cardNum )) {
           alert("אנא הכנס מספר כרטיס אשראי תקין");
-          return false;
+          return;
         }
         //check if the expiration date is valid
         if(!ExpirationValid(expDate)) {
             alert("אנא הכנס תוקף אשראי תקין");
-            return false;
+            return;
         }
 
         //check if the cvv is valid
         if(!CVVValid(cvv))
         {
             alert("אנא הכנס CVV תקין");
-            return false
+            return;
         }
 
         //validate name card is only letters
         if (!isLettersOnly(cardName)) {
           alert("אנא הכנס שם בעל הכרטיס רק באותיות");
-          return false;
+          return;
         }
 
          //check if the id number  is valid
         if(!validID(idNumber)) {
             alert("אנא הכנס מספר תעודת זהות תקין");
-            return false;
+            return;
         }
 
-        const newOrder={numberClasses,cardNum,expDate,cvv,cardName,idNumber};
-        orders.push(newOrder);
-        alert("ההזמנה בוצעה בהצלחה");
-        window.location.href = "myAccount.html";
+        // All inputs are valid, submit the form
+        formData.removeEventListener('submit', onSubmit);  // Remove the event listener
+        formData.submit();  // Submit the form
+        formData.addEventListener('submit', onSubmit);  // Add the event listener back
+    };
 
-
-    })
-
+    formData.addEventListener("submit", onSubmit);
 });
+const sendMessage = (message) => {
+    alert(message);
+};
 
-
+window.addEventListener("load", function() {
+    // Check if the .msg element exists
+    const msgElement = document.querySelector(".msg");
+    if (msgElement) {
+        // Check if it has any text content
+        const msgContent = msgElement.textContent.trim();
+        if (msgContent !== "") {
+            sendMessage(msgContent);
+        }
+    }
+});
 
 

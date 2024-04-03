@@ -12,5 +12,5 @@ homePage = Blueprint(
 # Routes
 @homePage.route('/homePage')
 def index():
-    user=get_user_by_username(session['usersname'])
+    user = get_user_by_username(session['username'])
     return render_template('homePage.html',user=user)

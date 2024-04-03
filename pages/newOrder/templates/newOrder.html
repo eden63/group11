@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page_body_main %}
-     <form action="" method="GET" class="order-form" id="orderForm">
+     <form action="/newOrder" method="POST" class="order-form" id="orderForm">
          <h1>הזמנה חדשה</h1>
          <h2>עלות שיעור : 60 ש"ח</h2>
         <div id="classes">
@@ -36,6 +36,7 @@
         </div>
         <input type="submit" name="button" value="הזמן עכשיו" name="">
     </form>
+<div class="msg" style="display: none">{{msg}}</div>`
 {% endblock %}
 
 {% block page_body_js %}
