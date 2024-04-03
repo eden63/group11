@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template,url_for
+from utilities.db_manager import *
 
 # about blueprint definition
 myClasses = Blueprint(
@@ -13,4 +14,6 @@ myClasses = Blueprint(
 # Routes
 @myClasses.route('/myClasses')
 def index():
-    return render_template('myClasses.html')
+    user = get_user_by_username(session['username'])
+    array_my_classes = get_user_classes(user)
+    return render_template('myClasses.html', classes=array_my_classes)

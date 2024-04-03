@@ -34,9 +34,9 @@
     direction: rtl;
 }
 
-  .grid-item {
+.grid-item {
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -45,7 +45,7 @@
     height:60px;
     border-radius: 20px;
     font-family:Calibri;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
   }
 
