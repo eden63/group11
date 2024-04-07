@@ -34,8 +34,7 @@
     direction: rtl;
 }
 
-.grid-item {
-    background-color: white;
+.grid-item{
     padding: 40px;
     display: flex;
     text-align: center;
@@ -47,6 +46,10 @@
     font-family:Calibri;
     font-size: 25px;
     font-weight: bold;
+}
+.grid-item button {
+    background-color: white;
+
   }
 
   .buttons button{
@@ -55,7 +58,7 @@
     color: black;
     width:150px;
     height:60px;
-    bottom: 20px;
+    bottom: 30px;
     font-family: Calibri;
     font-size: 20px;
     font-weight: bold;

@@ -12,11 +12,11 @@
 
 {% block page_body_main %}
 
-     <div class="date">
+<div class="date">
     <h1 id="dayNum">{{ day }}</h1>
     <h1 id="month">{{ month}}</h1>
-    </div>
-   <div class="grid-container">
+</div>
+<div class="grid-container">
     {% for class in classes %}
         <button class="grid-item">
             {{ class.hour }}
@@ -24,10 +24,15 @@
             מאמנת : {{ class.coach }}
         </button>
     {% endfor %}
- <div class="buttons">
-    <button id="last">היום הקודם</button>
-    <button id="next">היום הבא</button>
 </div>
+<div class="buttons">
+        <button id="last">היום הקודם</button>
+        <button id="next">היום הבא</button>
 </div>
+
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{url_for('bookClass.static', filename='js/bookClass.js')}}"></script>
 {% endblock %}
 

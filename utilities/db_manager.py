@@ -79,17 +79,20 @@ def add_one_day(date_string):
     new_date_string = new_date.strftime('%Y-%m-%d')
 
     return new_date_string
-def insert_class(date,hour):
-    for i in range(1,31):
+def insert_class(date):
+    for i in range(1, 31):
         # Check if a class already exists for this date
-        existing_class = classes_col.find_one({'date': date, 'hour': hour})
+        existing_class = classes_col.find_one({'date': date})
         if existing_class is None:
-            new_class = {
-                'date': date,
-                'hour': "17:00",
-                'coach': "תמי לוי"
-            }
-            classes_col.insert_one(new_class)
-        date=add_one_day(date)
+            hours = ["16:00", "17:00", "18:00", "19:00"]
+            for hour in hours:
+                new_class = {
+                    'date': date,
+                    'hour': hour,
+                    'coach': "תמי לוי"
+                }
+                classes_col.insert_one(new_class)
+        date = add_one_day(date)
 
-# insert_class("2024-04-03","17:00")
+
+# insert_class("2024-04-05",)
