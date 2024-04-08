@@ -48,9 +48,9 @@ def create_user(username,password, phone, fullName, email):
 def get_user_classes(user):
     return user['classes']
 
-def update_leftClasses(user):
+def update_leftClasses(user,num):
     username = user['username']
-    leftClasses=int(user['leftClasses'])-1
+    leftClasses = int(user['leftClasses'])+num
     leftClasses = str(leftClasses)
     users_col.update_one({'username': username}, {'$set': {'leftClasses': leftClasses}})
 

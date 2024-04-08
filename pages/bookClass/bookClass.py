@@ -74,14 +74,17 @@ def add_class():
         'hour': requestData['hour'],
         'coach': requestData['coach']
     }
-    print(classItem)
     user = get_user_by_username(session['username'])
-    print(user)
     if classItem not in user['classes']:
         users_col.update_one({'username': session['username']}, {'$push': {'classes': classItem}})
-        update_leftClasses(user)
-        print(f"Class added to user {session['username']}!")
+        update_leftClasses(user, -1)
         return jsonify({'msg': 'הרישום לשיעור בוצע בהצלחה!'})
     else:
-        print(f"Class already added to user {session['username']}!")
         return jsonify({'msg': 'אתה כבר רשום לשיעור זה!'})
+
+@bookClass.route('/get-user', methods=['GET'])
+def get_user():
+    username=session['username']
+    user=get_user_by_username(username)
+    user['_id'] = str(user['_id'])
+    return jsonify(user)

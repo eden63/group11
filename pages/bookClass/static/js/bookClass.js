@@ -45,30 +45,46 @@ function updateClassesUI(classes) {
       button.addEventListener('click', function() {
           const clickedButton = this;
           clickedButton.style.backgroundColor = '#A6BDD9';
-
-        // Make a POST request to the server-side route
-        fetch('/add-class', {
-            method: 'POST',
+           // Fetch the user data from the server
+        fetch('/get-user', {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(classItem),
         })
         .then(response => response.json())
-        .then(data => {
-        // Get the .msg element
-        const msgElement = document.querySelector(".msg");
-        // Set the text content of the .msg element
-        msgElement.textContent = data.msg;
-        alert(data.msg);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert(data.msg);
-        })
-            .finally(() => {
-            clickedButton.style.backgroundColor='white';
-        });
+        .then(user => {
+            if(parseInt(user.leftClasses) > 0) {
+
+                // Make a POST request to the server-side route
+                fetch('/add-class', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(classItem),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Get the .msg element
+                        const msgElement = document.querySelector(".msg");
+                        // Set the text content of the .msg element
+                        msgElement.textContent = data.msg;
+                        alert(data.msg);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert(data.msg);
+                    })
+                    .finally(() => {
+                        clickedButton.style.backgroundColor = 'white';
+                    });
+            }else{
+            alert("נגמרו לך השיעורים, בכדי לקבוע שיעור יש להזמין עוד שיעורים");
+            clickedButton.style.backgroundColor = 'white';}
+            })
+            .catch(error => console.error('Error fetching user:', error));
+
         });
 
         // Append the button to the grid container

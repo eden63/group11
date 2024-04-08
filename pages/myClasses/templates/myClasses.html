@@ -15,13 +15,16 @@
   {% for class in classes %}
   <div class="grid-item">
     <p class="time">{{ class.hour }}</p>
-    <p class="date">{{ class.date }}
-        <br>
-        {{ class.coach }}
-    </p>
+    <p class="date">{{ class.date }}</p>
+    <p class="coach">{{ class.coach }}</p>
     <button class="buttons">בטל שיעור</button>
   </div>
   {% endfor %}
 </div>
 {% endif %}
+<div class="msg" style="display: none">{{msg}}</div>`
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('myClasses.static', filename='js/myClasses.js') }}"></script>
 {% endblock %}
