@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template,url_for, request,jsonify
 from utilities.db_manager import *
 from datetime import datetime
+
+
 # about blueprint definition
 myClasses = Blueprint(
     'myClasses',

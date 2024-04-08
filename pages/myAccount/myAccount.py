@@ -14,8 +14,8 @@ myAccount = Blueprint(
 # Routes
 @myAccount.route('/myAccount')
 def index():
-
-    user = get_user_by_username(session['username'])
+    username=session['username']
+    user = get_user_by_username(username)
     leftClasses = user['leftClasses']
     return render_template('myAccount.html', user=user, leftClasses=leftClasses)
     # return render_template('myAccount.html', user=user)

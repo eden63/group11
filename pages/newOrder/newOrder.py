@@ -32,7 +32,7 @@ def newOrder_form():
     leftClasses=update_class(request.form.get('number'))
     user=get_user_by_username(session['username'])
     message = "הזמנה בוצעה בהצלחה"
-    return render_template('myAccount.html', msg=message,leftClasses=leftClasses)
+    return render_template('myAccount.html', user=user,msg=message,leftClasses=leftClasses)
 
 def update_class(classes):
     username = get_user_by_username(session['username'])
