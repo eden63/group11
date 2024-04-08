@@ -66,3 +66,4 @@ def next_classes(date):
     print(f"Returning classes: {classes_for_next_day}")  # Log the returned classes
     classes_json = jsonify(classes_for_next_day)
     return classes_json
+

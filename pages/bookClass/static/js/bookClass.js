@@ -49,7 +49,9 @@ function updateClassesUI(classes) {
         // Delay the alert by a small amount of time to allow the color change to render
         setTimeout(() => {
             alert('נרשמת לשיעור ב ' + classItem.hour + ' עם ' + classItem.coach + ' בהצלחה!');
-        }, 0);
+        }, 100);
+
+
 });
 
         // Append the button to the grid container
