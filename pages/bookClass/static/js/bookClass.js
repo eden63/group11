@@ -42,17 +42,34 @@ function updateClassesUI(classes) {
         `;
 
         // Add a 'click' event listener to the button
-        button.addEventListener('click', function() {
-        // Change the button's color to yellow
-        this.style.backgroundColor = '#A6BDD9';
+      button.addEventListener('click', function() {
+          const clickedButton = this;
+          clickedButton.style.backgroundColor = '#A6BDD9';
 
-        // Delay the alert by a small amount of time to allow the color change to render
-        setTimeout(() => {
-            alert('נרשמת לשיעור ב ' + classItem.hour + ' עם ' + classItem.coach + ' בהצלחה!');
-        }, 100);
-
-
-});
+        // Make a POST request to the server-side route
+        fetch('/add-class', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(classItem),
+        })
+        .then(response => response.json())
+        .then(data => {
+        // Get the .msg element
+        const msgElement = document.querySelector(".msg");
+        // Set the text content of the .msg element
+        msgElement.textContent = data.msg;
+        alert(data.msg);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert(data.msg);
+        })
+            .finally(() => {
+            clickedButton.style.backgroundColor='white';
+        });
+        });
 
         // Append the button to the grid container
         gridContainer.appendChild(button);
@@ -63,9 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dayNumElement = document.getElementById('dayNum');
     const monthElement = document.getElementById('month');
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    // const currentDate = new Date();
 
-    console.log("Current date before change:", currentDate);
 
     // Function to change day
     function changeDay(offset) {

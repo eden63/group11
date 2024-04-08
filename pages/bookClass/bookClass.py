@@ -1,6 +1,5 @@
-from flask import Blueprint, render_template, url_for, jsonify
+from flask import Blueprint, render_template, url_for, jsonify, request, session
 from datetime import date
-from pymongo import MongoClient
 from utilities.db_manager import *
 
 # about blueprint definition
@@ -67,3 +66,22 @@ def next_classes(date):
     classes_json = jsonify(classes_for_next_day)
     return classes_json
 
+@bookClass.route('/add-class', methods=['POST'])
+def add_class():
+    requestData = request.get_json()
+    classItem = {
+        'date': requestData['date'],
+        'hour': requestData['hour'],
+        'coach': requestData['coach']
+    }
+    print(classItem)
+    user = get_user_by_username(session['username'])
+    print(user)
+    if classItem not in user['classes']:
+        users_col.update_one({'username': session['username']}, {'$push': {'classes': classItem}})
+        update_leftClasses(user)
+        print(f"Class added to user {session['username']}!")
+        return jsonify({'msg': 'הרישום לשיעור בוצע בהצלחה!'})
+    else:
+        print(f"Class already added to user {session['username']}!")
+        return jsonify({'msg': 'אתה כבר רשום לשיעור זה!'})
