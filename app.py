@@ -1,5 +1,4 @@
 from flask import Flask
-from utilities.db_manager import *
 
 
 ###### App setup

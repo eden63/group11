@@ -34,7 +34,6 @@ def get_day(date_string):
 
     return day
 
-from datetime import datetime, timedelta
 
 def get_next_day(date_string):
     # Convert the date string to a datetime object

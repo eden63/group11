@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template,redirect, url_for, request, session
 from utilities.db_manager import *
 
-# about blueprint definition
+#  blueprint definition
 myAccount = Blueprint(
     'myAccount',
     __name__,

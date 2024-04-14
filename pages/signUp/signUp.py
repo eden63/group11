@@ -2,7 +2,7 @@ from flask import Blueprint, render_template,redirect, url_for, request
 from utilities.db_manager import *
 
 
-# about blueprint definition
+#  blueprint definition
 signUp = Blueprint(
     'signUp',
     __name__,

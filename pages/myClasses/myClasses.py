@@ -21,6 +21,9 @@ def index():
     today = datetime.now().strftime('%Y-%m-%d')
     array_my_classes_today=[class_ for class_ in array_my_classes if class_['date'] >= today]
     array_my_classes_today.sort(key=lambda x: (x['date'], x['hour']))
+    for class_ in array_my_classes_today:
+        date_object = datetime.strptime(class_['date'], '%Y-%m-%d')
+        class_['date'] = date_object.strftime('%d-%m-%Y')
     return render_template('myClasses.html', classes=array_my_classes_today)
 
 @myClasses.route('/myClasses/remove-class', methods=['POST'])
