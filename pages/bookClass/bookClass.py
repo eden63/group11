@@ -66,9 +66,17 @@ def next_classes(date):
     classes_json = jsonify(classes_for_next_day)
     return classes_json
 
+
 @bookClass.route('/add-class', methods=['POST'])
 def add_class():
     requestData = request.get_json()
+    class_datetime_str = requestData['date'] + ' ' + requestData['hour']
+    class_datetime = datetime.strptime(class_datetime_str, '%Y-%m-%d %H:%M')
+
+    # Check if the class's date and time is in the future
+    if class_datetime <= datetime.now():
+        return jsonify({'msg': 'לא ניתן להזמין שיעור שכבר התקיים'})
+
     classItem = {
         'date': requestData['date'],
         'hour': requestData['hour'],

@@ -32,7 +32,8 @@ function ExpirationValid(expirationDate) {
 
 
 function isLettersOnly(input) {
-    return /^[a-zA-Z\u0590-\u05FF\s]+$/.test(input);
+    var words = input.trim().split(' ');
+    return /^[a-zA-Z\u0590-\u05FF\s]+$/.test(input) && words.length >= 2;
 }
 
 function CVVValid(cvv) {
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //validate name card is only letters
         if (!isLettersOnly(cardName)) {
-          alert("אנא הכנס שם בעל הכרטיס רק באותיות");
+            alert("אנא הכנס שם המלא רק באותיות ולפחות 2 מילים");
           return;
         }
 

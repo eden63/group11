@@ -46,3 +46,6 @@ app.register_blueprint(signUp)
 ##header
 from components.header.header import header
 app.register_blueprint(header)
+
+
+

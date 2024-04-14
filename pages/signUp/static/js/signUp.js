@@ -1,5 +1,6 @@
 function isLettersOnly(input) {
-    return /^[a-zA-Z\u0590-\u05FF\s]+$/.test(input);
+    var words = input.trim().split(' ');
+    return /^[a-zA-Z\u0590-\u05FF\s]+$/.test(input) && words.length >= 2;
 }
 
 function isValidPhoneNumber(phoneNumber) {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         //validate full name is only letters
         if (!isLettersOnly(fullName)) {
-            alert("אנא הכנס שם המלא רק באותיות");
+            alert("אנא הכנס שם המלא רק באותיות ולפחות 2 מילים");
             return;
         }
 

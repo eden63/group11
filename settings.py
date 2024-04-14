@@ -12,5 +12,4 @@ DB = {
     'password': os.environ.get('DB_PASSWORD'),
     'database': os.environ.get('DB_NAME')
 }
-
 mongoDB = {'uri':"mongodb+srv://edenli:eden0901@cluster0.a8hvwx3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"}
